@@ -1,0 +1,213 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #121212;
+  font-family: "YuGothic", "Yu Gothic", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #121212;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+.header .logo {
+  width: 100%;
+  max-width: 130px;
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  z-index: 30;
+}
+.header .logo a {
+  display: block;
+}
+.header .logo img {
+  width: 100%;
+}
+.header .hamburger {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 30;
+}
+.header .hamburger span {
+  width: 30px;
+  height: 2px;
+  background-color: #121212;
+  display: inline-block;
+  position: absolute;
+  left: 15px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.header .hamburger span:nth-child(1) {
+  top: 25px;
+}
+.header .hamburger span:nth-child(2) {
+  top: 35px;
+}
+.header .hamburger.active span:nth-child(1) {
+  top: 30px;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+.header .hamburger.active span:nth-child(2) {
+  top: 30px;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+.header .nav {
+  width: 100%;
+  height: 100vh;
+  background-color: #c9eff0;
+  padding: 100px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  opacity: 0;
+  visibility: hidden;
+}
+.header .nav.active {
+  opacity: 1;
+  visibility: visible;
+}
+.header .nav .menu-area {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.header .nav .menu-area .menu {
+  max-width: 640px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 20px 20px 0 0;
+  padding: 80px 80px 20px;
+  margin: 0 auto;
+}
+.header .nav .menu-area .menu li {
+  width: 46%;
+  border-bottom: 1px dashed #121212;
+  margin: 0 2%;
+  position: relative;
+}
+.header .nav .menu-area .menu li::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #121212;
+  border-right: 2px solid #121212;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 38px;
+  right: 10px;
+}
+.header .nav .menu-area .menu li:nth-child(-n+2) {
+  border-top: 1px dashed #121212;
+}
+.header .nav .menu-area .menu li a {
+  display: block;
+  padding: 30px 0;
+}
+.header .nav .menu-area .btn {
+  max-width: 640px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  border-radius: 0 0 20px 20px;
+  padding: 20px 80px 80px;
+  margin: 0 auto;
+}
+.header .nav .menu-area .btn li {
+  width: 46%;
+  background-color: #ffef00;
+  border-radius: 20px;
+  margin: 0 2%;
+}
+.header .nav .menu-area .btn li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  padding: 20px 0;
+  gap: 10px;
+}
+.header .nav .menu-area .btn li .arrow {
+  width: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .header .logo {
+    max-width: 100px;
+    top: 23px;
+  }
+  .header .nav .menu-area .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px;
+  }
+  .header .nav .menu-area .menu li {
+    width: 100%;
+    margin: 0;
+  }
+  .header .nav .menu-area .menu li::after {
+    top: 30px;
+  }
+  .header .nav .menu-area .menu li:nth-child(-n+2) {
+    border-top: none;
+  }
+  .header .nav .menu-area .menu li a {
+    padding: 20px 0;
+  }
+  .header .nav .menu-area .btn {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  .header .nav .menu-area .btn li {
+    width: 100%;
+  }
+}
