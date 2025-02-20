@@ -1,0 +1,27 @@
+@charset 'utf-8';
+@use "mixin";
+
+// reset
+html {
+  font-size: 100%;
+}
+body {
+  color: #121212;
+  font-family: "YuGothic", "Yu Gothic", sans-serif;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #121212;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
