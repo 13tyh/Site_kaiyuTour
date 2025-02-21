@@ -828,3 +828,58 @@ a {
     right: 10px;
   }
 }
+
+//footer
+.footer {
+  background-color: #f2f9fd;
+  padding: 20px 0 40px;
+
+  .content {
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 5%;
+    margin: 0 auto 30px;
+    position: relative;
+    top: -60px;
+
+    .info-area {
+      width: 50%;
+      font-size: 14px;
+
+      .address {
+        margin-bottom: 5px;
+      }
+
+      .tel {
+        margin-bottom: 5px;
+      }
+
+      .menu {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          width: 45%;
+          border-bottom: 1px dashed #121212;
+          position: relative;
+          margin-right: 5%;
+
+          &::after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-top: 1px solid #121212;
+            border-right: 1px solid #121212;
+            transform: rotate(45deg);
+            position: absolute;
+            top: 7px;
+            right: 10px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -820,3 +820,57 @@ a:hover {
     right: 10px;
   }
 }
+.footer {
+  background-color: #f2f9fd;
+  padding: 20px 0 40px;
+}
+.footer .content {
+  max-width: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 5%;
+  margin: 0 auto 30px;
+  position: relative;
+  top: -60px;
+}
+.footer .content .info-area {
+  width: 50%;
+  font-size: 14px;
+}
+.footer .content .info-area .address {
+  margin-bottom: 5px;
+}
+.footer .content .info-area .tel {
+  margin-bottom: 5px;
+}
+.footer .content .info-area .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.footer .content .info-area .menu li {
+  width: 45%;
+  border-bottom: 1px dashed #121212;
+  position: relative;
+  margin-right: 5%;
+}
+.footer .content .info-area .menu li::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid #121212;
+  border-right: 1px solid #121212;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  top: 7px;
+  right: 10px;
+}
