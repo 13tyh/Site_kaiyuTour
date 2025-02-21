@@ -532,6 +532,7 @@ a {
     box-shadow: 0 4px 0 0 #aaa;
     padding: 20px 0;
     margin: 0 auto 6px;
+    gap: 10px;
 
     &:hover {
       transform: translateY(5px);
@@ -832,7 +833,7 @@ a {
 //footer
 .footer {
   background-color: #f2f9fd;
-  padding: 20px 0 40px;
+  padding: 0 20px 40px;
 
   .content {
     max-width: 1000px;
@@ -840,7 +841,7 @@ a {
     justify-content: space-between;
     background-color: #fff;
     border-radius: 30px;
-    padding: 5%;
+    padding: 5% 5% 0;
     margin: 0 auto 30px;
     position: relative;
     top: -60px;
@@ -854,7 +855,7 @@ a {
       }
 
       .tel {
-        margin-bottom: 5px;
+        margin-bottom: 30px;
       }
 
       .menu {
@@ -875,10 +876,68 @@ a {
             border-right: 1px solid #121212;
             transform: rotate(45deg);
             position: absolute;
-            top: 7px;
+            top: 20px;
             right: 10px;
           }
+
+          &:nth-child(-n + 2) {
+            border-top: 1px dashed #121212;
+          }
+
+          a {
+            display: block;
+            padding: 12px 0;
+          }
         }
+      }
+    }
+
+    .btn-area {
+      width: 45%;
+      max-width: 380px;
+      margin-left: 5%;
+
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffef00;
+        border-radius: 20px;
+        font-weight: bold;
+        padding: 25px 0;
+        gap: 10px;
+
+        &:first-child {
+          margin-bottom: 20px;
+        }
+
+        .arrow {
+          width: 20px;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    font-size: 10px;
+    text-align: center;
+  }
+}
+@include mixin.mq(sp) {
+  .footer {
+    .content {
+      flex-direction: column;
+      padding: 40px 20px 0px;
+      margin: 0 auto;
+
+      .info-area {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      .btn-area {
+        width: 100%;
+        margin: 0 auto;
       }
     }
   }
